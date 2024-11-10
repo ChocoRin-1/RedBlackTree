@@ -2,52 +2,52 @@ package com.example;
 
 public class Main {
     public static void main(String[] args) {
-        Tree bst = new Tree();
+        Tree rbt = new Tree();
            
         System.out.println("Angka-angka yang dimasukkan ke dalam Tree:");
-        bst.add('5'); 
-        bst.add('3');
-        bst.add('7');
-        bst.add('2');
-        bst.add('4');
-        bst.add('6');
-        bst.add('8');
-        bst.add('9');
-        bst.add('1');
-        bst.add('0');
+        rbt.add('5'); 
+        rbt.add('3');
+        rbt.add('7');
+        rbt.add('2');
+        rbt.add('4');
+        rbt.add('6');
+        rbt.add('8');
+        rbt.add('9');
+        rbt.add('1');
+        rbt.add('0');
         System.out.println("\n");
-        bst.printTreePretty();
+        rbt.printTree();
 
-        bst.remove('2');
-        bst.remove('2');
+        // rbt.remove('2');
+        // rbt.remove('2');
 
-        bst.printTreePretty();
+        // rbt.printTree();
 
-        bst.add('2');
+        // rbt.add('2');
        
 
-        bst.printTreePretty();
+        // bst.printTree();
 
-        bst.add('2');
+        // bst.add('2');
 
-        bst.printTreePretty();
+        // bst.printTree();
         
         long startInorder = System.nanoTime();
-        bst.inorder();
+        rbt.inorder();
         long endInorder = System.nanoTime();
         double timeInorder = (endInorder - startInorder) / 1_000_000_000.0;
         System.out.println("Waktu eksekusi inorder traversal: " + timeInorder + " detik\n");
 
         
         long startPreorder = System.nanoTime();
-        bst.preorder();
+        rbt.preorder();
         long endPreorder = System.nanoTime();
         double timePreorder = (endPreorder - startPreorder) / 1_000_000_000.0;
         System.out.println("Waktu eksekusi preorder traversal: " + timePreorder + " detik\n");
 
         
         long startPostorder = System.nanoTime();
-        bst.postorder();
+        rbt.postorder();
         long endPostorder = System.nanoTime();
         double timePostorder = (endPostorder - startPostorder) / 1_000_000_000.0;
         System.out.println("Waktu eksekusi postorder traversal: " + timePostorder + " detik");
