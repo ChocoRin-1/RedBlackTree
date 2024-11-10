@@ -17,20 +17,6 @@ public class Main {
         rbt.add('0');
         System.out.println("\n");
         rbt.printTree();
-
-        // rbt.remove('2');
-        // rbt.remove('2');
-
-        // rbt.printTree();
-
-        // rbt.add('2');
-       
-
-        // bst.printTree();
-
-        // bst.add('2');
-
-        // bst.printTree();
         
         long startInorder = System.nanoTime();
         rbt.inorder();

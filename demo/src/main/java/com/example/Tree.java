@@ -360,48 +360,47 @@ public class Tree {
             printTree(node.getLeft(), indent, false);
             printTree(node.getRight(), indent, true);
         }
-     }
-            public void inorder() {
-                System.out.print("Inorder traversal: ");
-                inorderRec(root);
-                System.out.println();
-            }
-        
-            private void inorderRec(Node node) {
-                if (node != null) {
-                    inorderRec(node.getLeft());
-                    System.out.print(node.getKey() + " ");
-                    inorderRec(node.getRight());
-                }
-            }
-        
-            
-            public void preorder() {
-                System.out.print("Preorder traversal: ");
-                preorderRec(root);
-                System.out.println();
-            }
-        
-            private void preorderRec(Node node) {
-                if (node != null) {
-                    System.out.print(node.getKey() + " ");
-                    preorderRec(node.getLeft());
-                    preorderRec(node.getRight());
-                }
-            }
-        
-            
-            public void postorder() {
-                System.out.print("Postorder traversal: ");
-                postorderRec(root);
-                System.out.println();
-            }
-            private void postorderRec(Node node) {
-                        if (node != null) {
-                            postorderRec(node.getLeft());
-                            postorderRec(node.getRight());
-                            System.out.print(node.getKey() + " ");
-                        }
-                    }
-} 
+    }
 
+    public void inorder() {
+        System.out.print("Inorder traversal: ");
+        inorderRec(root);
+        System.out.println();
+    }
+
+    private void inorderRec(Node node) {
+        if (node != null) {
+            inorderRec(node.getLeft());
+            System.out.print(node.getKey() + " ");
+            inorderRec(node.getRight());
+        }
+    }
+
+    public void preorder() {
+        System.out.print("Preorder traversal: ");
+        preorderRec(root);
+        System.out.println();
+    }
+
+    private void preorderRec(Node node) {
+        if (node != null) {
+            System.out.print(node.getKey() + " ");
+            preorderRec(node.getLeft());
+            preorderRec(node.getRight());
+        }
+    }
+
+    public void postorder() {
+        System.out.print("Postorder traversal: ");
+        postorderRec(root);
+        System.out.println();
+    }
+
+    private void postorderRec(Node node) {
+        if (node != null) {
+            postorderRec(node.getLeft());
+            postorderRec(node.getRight());
+            System.out.print(node.getKey() + " ");
+        }
+    }
+}
