@@ -5,18 +5,28 @@ public class Main {
         Tree rbt = new Tree();
            
         System.out.println("Angka-angka yang dimasukkan ke dalam Tree:");
-        rbt.add('5'); 
-        rbt.add('3');
-        rbt.add('7');
-        rbt.add('2');
-        rbt.add('4');
-        rbt.add('6');
-        rbt.add('8');
-        rbt.add('9');
-        rbt.add('1');
-        rbt.add('0');
+        rbt.add('A'); 
+        rbt.add('B');
+        rbt.add('C');
+        rbt.add('D');
+        rbt.add('E');
+        rbt.add('F');
+        rbt.add('G');
+        rbt.add('H');
+        rbt.add('I');
+        rbt.add('J');
         System.out.println("\n");
-        rbt.printTree();
+        rbt.printTreePretty();
+
+        rbt.remove('L');
+        rbt.remove('A');
+        System.out.println("\n");
+
+        rbt.printTreePretty();
+
+        // rbt.add('C');
+        // System.out.println("\n");
+        // rbt.printTreePretty();
         
         long startInorder = System.nanoTime();
         rbt.inorder();
