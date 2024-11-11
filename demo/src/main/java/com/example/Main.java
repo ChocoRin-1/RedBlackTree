@@ -24,6 +24,8 @@ public class Main {
 
         rbt.printTreePretty();
 
+        rbt.find('J');
+
         // rbt.add('C');
         // System.out.println("\n");
         // rbt.printTreePretty();

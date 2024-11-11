@@ -274,6 +274,40 @@ public class Tree {
         return node;
     }
 
+    // Metode untuk mencari node berdasarkan key
+public Node find(char key) {
+    System.out.println("Mulai pencarian untuk key: " + key);
+    Node result = findRec(root, key);
+    if (result == null) {
+        System.out.println("Node dengan key '" + key + "' tidak ditemukan.");
+    } else {
+        System.out.println("Node dengan key '" + key + "' ditemukan.");
+    }
+    return result;
+}
+
+// Metode rekursif untuk mencari node
+private Node findRec(Node current, char key) {
+    if (current == null) {
+        System.out.println("Node saat ini adalah null, kembali ke level sebelumnya.");
+        return null; // Node tidak ditemukan
+    }
+    System.out.println("Memeriksa node dengan key: " + current.getKey());
+    
+    if (key == current.getKey()) {
+        return current; // Node ditemukan
+    } else if (key < current.getKey()) {
+        System.out.println("Key '" + key + "' lebih kecil dari key saat ini '" + current.getKey() + "', mencari ke kiri.");
+        return findRec(current.getLeft(), key); // Cari ke kiri
+    } else {
+        System.out.println("Key '" + key + "' lebih besar dari key saat ini '" + current.getKey() + "', mencari ke kanan.");
+        return findRec(current.getRight(), key); // Cari ke kanan
+    }
+}
+   
+       
+    
+
     
 
     // public void printTree() {
